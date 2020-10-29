@@ -28,6 +28,6 @@ void Clutch(void) {
   Joystick.setZAxis(ClutchAll);
 
   //Uncomment below to debug.
-  Serial.println(ClutchAll);
+  //Serial.println(ClutchAll);
 
 }
