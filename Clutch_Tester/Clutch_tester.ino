@@ -4,9 +4,13 @@ void setup() {
 
 void loop() {
 
-  int ClutchValue = analogRead(A2);
+  int ClutchValueLeft = analogRead(A0);
+  Serial.print("Left Value: ");
+  Serial.println(ClutchValueLeft);
+  delay(1000);
 
-  Serial.print("Value: ");
-  Serial.println(ClutchValue);
-  delay(300);
+  int ClutchValueRight = analogRead(A1);
+  Serial.print("Right Value: ");
+  Serial.println(ClutchValueRight);
+  delay(1000);
 }
