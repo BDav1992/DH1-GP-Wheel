@@ -1,3 +1,7 @@
+//This file contains parts from AMStudio's sketch. His YouTube channel: https://www.youtube.com/channel/UCQS1ZB3BVSrBo3tCs7PyfxQ
+//His sketch: https://bit.ly/3152ALk
+
+
 #include <Keypad.h>
 #include <Joystick.h>
 
