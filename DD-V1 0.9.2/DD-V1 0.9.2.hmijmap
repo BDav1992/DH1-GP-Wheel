@@ -1,0 +1,1239 @@
+{
+  "BindingsEx": {
+    "global.delta.txt": {
+      "Formula": {
+        "Expression": "if([DataCorePlugin.Computed.Fuel_CurrentLapIsValidForTracking] = 0 or [IsInPitLane] = 1, 'NREF',\r\n\r\nif([PersistantTrackerPlugin.SessionBestLiveDeltaSeconds]>=0,\r\nformat([PersistantTrackerPlugin.SessionBestLiveDeltaSeconds],'+0.000'), \r\nformat([PersistantTrackerPlugin.SessionBestLiveDeltaSeconds],'0.000')))"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.delta.pco": {
+      "Formula": {
+        "Expression": "if([PersistantTrackerPlugin.SessionBestLiveDeltaSeconds] >=0 , 0, 1)\r\n"
+      },
+      "StartColor": "#FFFF0000",
+      "EnableMiddleColor": false,
+      "MiddleColor": "#FF000000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FF008000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 1.0,
+      "Mode": 4,
+      "TargetPropertyName": "pco"
+    },
+    "global.erspercent.txt": {
+      "FormatString": "0'%",
+      "Formula": {
+        "Expression": "[DataCorePlugin.GameData.NewData.ERSPercent]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.fuelliter.txt": {
+      "FormatString": "0L",
+      "Formula": {
+        "Expression": "[Fuel]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.currtime.txt": {
+      "Formula": {
+        "Expression": "format([DataCorePlugin.CustomExpression.CurrentDateTime],'HH:mm:ss')"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.position.txt": {
+      "Formula": {
+        "Expression": "format([DataCorePlugin.GameData.NewData.Position],'0') + '/' + format([DataCorePlugin.GameData.NewData.OpponentsCount],'0')"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.erspb.val": {
+      "Formula": {
+        "Expression": "[DataCorePlugin.GameData.NewData.ERSPercent]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "val"
+    },
+    "global.fuelpb.val": {
+      "Formula": {
+        "Expression": "[FuelPercent]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "val"
+    },
+    "global.oilpressure.txt": {
+      "FormatString": "0psi",
+      "Formula": {
+        "Expression": "[OilPressure]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.oiltemp.txt": {
+      "FormatString": "0°C",
+      "Formula": {
+        "Expression": "[OilTemperature]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.clutch.txt": {
+      "FormatString": "0%",
+      "Formula": {
+        "Expression": "[Clutch]/100"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.j0.val": {
+      "Formula": {
+        "Expression": "[Clutch]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "val"
+    },
+    "global.watertemp.txt": {
+      "FormatString": "0°C",
+      "Formula": {
+        "Expression": "[WaterTemperature]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.bbalance.txt": {
+      "FormatString": "0.0",
+      "Formula": {
+        "Expression": "[BrakeBias]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.ttrr.txt": {
+      "FormatString": "0°C",
+      "Formula": {
+        "Expression": "[TyreTemperatureRearRight]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.ttrl.txt": {
+      "FormatString": "0°C",
+      "Formula": {
+        "Expression": "[TyreTemperatureRearLeft]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.ttfr.txt": {
+      "FormatString": "0°C",
+      "Formula": {
+        "Expression": "[TyreTemperatureFrontRight]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.twrr.txt": {
+      "FormatString": "0'%",
+      "Formula": {
+        "Expression": "[TyreWearRearRight]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.btfl.txt": {
+      "FormatString": "0°C",
+      "Formula": {
+        "Expression": "[BrakeTemperatureFrontLeft]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.twrl.txt": {
+      "FormatString": "0'%",
+      "Formula": {
+        "Expression": "[TyreWearRearLeft]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.btfr.txt": {
+      "FormatString": "0°C",
+      "Formula": {
+        "Expression": "[BrakeTemperatureFrontRight]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.twfr.txt": {
+      "FormatString": "0'%",
+      "Formula": {
+        "Expression": "[TyreWearFrontRight]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.btrl.txt": {
+      "FormatString": "0°C",
+      "Formula": {
+        "Expression": "[BrakeTemperatureRearLeft]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.fuellapleft.txt": {
+      "FormatString": "0 lap(s)",
+      "Formula": {
+        "Expression": "[DataCorePlugin.Computed.Fuel_RemainingLaps]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.twfl.txt": {
+      "FormatString": "0'%",
+      "Formula": {
+        "Expression": "[TyreWearFrontLeft]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.btrr.txt": {
+      "FormatString": "0°C",
+      "Formula": {
+        "Expression": "[BrakeTemperatureRearRight]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.fueltimeleft.txt": {
+      "FormatString": "hh\\:mm\\:ss",
+      "Formula": {
+        "Expression": "[DataCorePlugin.Computed.Fuel_RemainingTime]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.tpfl.txt": {
+      "FormatString": "0.0psi",
+      "Formula": {
+        "Expression": "[TyrePressureFrontLeft]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.fuelperlap.txt": {
+      "FormatString": "0.0L/l",
+      "Formula": {
+        "Expression": "[DataCorePlugin.Computed.Fuel_LitersPerLap]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.tpfr.txt": {
+      "FormatString": "0.0psi",
+      "Formula": {
+        "Expression": "[TyrePressureFrontRight]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.fuelleft.txt": {
+      "FormatString": "0.0L",
+      "Formula": {
+        "Expression": "[Fuel]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.tprl.txt": {
+      "FormatString": "0.0psi",
+      "Formula": {
+        "Expression": "[TyrePressureRearLeft]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.lastlap.txt": {
+      "FormatString": "mm\\:ss\\.fff",
+      "Formula": {
+        "Expression": "\r\n\r\nif(timespantoseconds([LastLapTime]) = 0,\r\ntcase('NREF'),\r\n[LastLapTime]\r\n)"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.ttfl.txt": {
+      "FormatString": "0°C",
+      "Formula": {
+        "Expression": "[TyreTemperatureFrontLeft]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.tprr.txt": {
+      "FormatString": "0.0psi",
+      "Formula": {
+        "Expression": "[TyrePressureRearRight]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.currentlap.txt": {
+      "FormatString": "mm\\:ss\\.fff",
+      "Formula": {
+        "Expression": "if(([DataCorePlugin.GameData.NewData.SessionTypeName] = 'Practice' or [DataCorePlugin.GameData.NewData.SessionTypeName] = 'Qualify') and[DataCorePlugin.Computed.Fuel_CurrentLapIsValidForTracking] = 0 or [IsInPitLane] = 1\r\n,'NREF'\r\n,[DataCorePlugin.GameData.NewData.CurrentLapTime])\r\n\r\n"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.s1.txt": {
+      "FormatString": "mm\\:ss\\.fff",
+      "Formula": {
+        "Expression": "if(isnull([DataCorePlugin.GameData.NewData.Sector1BestTime]),\r\n'NREF',\r\n[DataCorePlugin.GameData.NewData.Sector1BestTime])"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.s2.txt": {
+      "FormatString": "mm\\:ss\\.fff",
+      "Formula": {
+        "Expression": "if(isnull([DataCorePlugin.GameData.NewData.Sector2BestTime]),\r\n'NREF',\r\n\r\nsecondstotimespan(\r\ntimespantoseconds([DataCorePlugin.GameData.NewData.Sector2BestTime])\r\n\r\n-\r\n\r\ntimespantoseconds([DataCorePlugin.GameData.NewData.Sector1BestTime])))"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.s3.txt": {
+      "FormatString": "mm\\:ss\\.fff",
+      "Formula": {
+        "Expression": "if(isnull([DataCorePlugin.GameData.NewData.Sector3BestTime]),\r\n'NREF',\r\n\r\nsecondstotimespan(\r\ntimespantoseconds([BestLapTime])\r\n\r\n-\r\n\r\n(timespantoseconds([DataCorePlugin.GameData.NewData.Sector2BestTime])\r\n\r\n-\r\n\r\ntimespantoseconds([DataCorePlugin.GameData.NewData.Sector1BestTime]))\r\n\r\n-\r\n\r\ntimespantoseconds([DataCorePlugin.GameData.NewData.Sector1BestTime])\r\n\r\n))"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.targetlap.txt": {
+      "FormatString": "mm\\:ss\\.fff",
+      "Formula": {
+        "Expression": "if(timespantoseconds(driverbestlap(1)) = 0,\r\ntcase('NREF'),\r\n\r\ndriverbestlap(1))"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.pbbestlap.txt": {
+      "FormatString": "mm\\:ss\\.fff",
+      "Formula": {
+        "Expression": "if(timespantoseconds([DataCorePlugin.GameData.NewData.BestLapTime]) = 0,\r\ntcase('NREF'),\r\n[DataCorePlugin.GameData.NewData.BestLapTime]\r\n)"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.dahead.txt": {
+      "FormatString": "0.000",
+      "Formula": {
+        "Expression": "if([SessionTypeName] = 'RACE' and [Position] = 1, \r\ntcase('-0.000'),\r\n\r\nif([SessionTypeName] != 'RACE' and [Position] = 1 and timespantoseconds([BestLapTime]) = 0, \r\ntcase('NREF'),\r\n\r\nif([SessionTypeName] != 'RACE' and [Position] = 1, \r\ntcase('-0.000'),\r\n\r\nif([SessionTypeName] != 'RACE' and [Position] != 1 and timespantoseconds([BestLapTime]) = 0, \r\ntcase('NREF'),\r\n\r\nif([SessionTypeName] != 'RACE' and [Position] != 1 and timespantoseconds([BestLapTime]) != 0, \r\ntimespantoseconds(driverbestlap([Position]-1))-timespantoseconds(driverbestlap([Position])),\r\n\r\ndrivergaptoplayer([Position]-1)\r\n)))))"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.dbehind.txt": {
+      "FormatString": "+0.000",
+      "Formula": {
+        "Expression": "if([SessionTypeName] = 'RACE' and [Position] = [OpponentsCount], \r\ntcase('+0.000'),\r\n\r\nif([SessionTypeName] != 'RACE' and [Position] = [OpponentsCount] and timespantoseconds([BestLapTime]) = 0, \r\ntcase('NREF'),\r\n\r\nif([SessionTypeName] != 'RACE' and [Position] = [OpponentsCount], \r\ntcase('+0.000'),\r\n\r\nif([SessionTypeName] != 'RACE' and [Position] != [OpponentsCount] and timespantoseconds([BestLapTime]) = 0, \r\ntcase('NREF'),\r\n\r\nif([SessionTypeName] != 'RACE' and [Position] != [OpponentsCount] and timespantoseconds([BestLapTime]) != 0,\r\ntimespantoseconds(driverbestlap([Position]+1))-timespantoseconds(driverbestlap([Position])),\r\n\r\ndrivergaptoplayer([Position]+1)\r\n)))))"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.laptime.txt": {
+      "FormatString": "hh\\:mm\\:ss",
+      "Formula": {
+        "Expression": "if([DataCorePlugin.GameData.NewData.TotalLaps]>1,format([DataCorePlugin.GameData.NewData.CurrentLap],'0') + '/' + format([DataCorePlugin.GameData.NewData.TotalLaps],'0'),\r\n[DataCorePlugin.GameData.NewData.SessionTimeLeft])\r\n"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.tcs.txt": {
+      "Formula": {
+        "Expression": "format([TCLevel], 'TCS: ' + [TCLevel])"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.abs.txt": {
+      "Formula": {
+        "Expression": "format([ABSLevel], 'ABS: ' + [ABSLevel])"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.dleader.txt": {
+      "FormatString": "0.000",
+      "Formula": {
+        "Expression": "if([SessionTypeName] = 'RACE' and [Position] = 1, \r\ntcase('-0.000'),\r\n\r\nif([SessionTypeName] != 'RACE' and [Position] = 1 and timespantoseconds([BestLapTime]) = 0, \r\ntcase('NREF'),\r\n\r\nif([SessionTypeName] != 'RACE' and [Position] = 1, \r\ntcase('-0.000'),\r\n\r\nif([SessionTypeName] != 'RACE' and [Position] != 1 and timespantoseconds([BestLapTime]) = 0, \r\ntcase('NREF'),\r\n\r\nif([SessionTypeName] != 'RACE' and [Position] != 1 and timespantoseconds([BestLapTime]) != 0, \r\ntimespantoseconds(driverbestlap(1))-timespantoseconds(driverbestlap([Position])),\r\n\r\ndrivergaptoplayer(1)\r\n)))))"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "startpage.#page.bco": {
+      "Formula": {
+        "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=97, 3,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>=90, 2,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>0, 1,0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 2.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 1.0,
+      "EndColorValue": 3.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "startpage.start.txt": {
+      "Formula": {
+        "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=97, tcase('RPM HIGH'),\r\nif([CarSettings_CurrentDisplayedRPMPercent]>=90, tcase('RPM GOOD'),\r\nif([CarSettings_CurrentDisplayedRPMPercent]>0, tcase('RPM LOW'),0)))"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "startpage.currtime.bco": {
+      "Formula": {
+        "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=97, 3,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>=90, 2,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>0, 1,0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 2.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 1.0,
+      "EndColorValue": 3.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "startpage.page.bco": {
+      "Formula": {
+        "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=97, 3,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>=90, 2,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>0, 1,0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 2.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 1.0,
+      "EndColorValue": 3.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "startpage.p4.bco": {
+      "Formula": {
+        "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=97, 3,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>=90, 2,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>0, 1,0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 2.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 1.0,
+      "EndColorValue": 3.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "startpage.speed.bco": {
+      "Formula": {
+        "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=97, 3,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>=90, 2,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>0, 1,0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 2.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 1.0,
+      "EndColorValue": 3.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "startpage.p5.bco": {
+      "Formula": {
+        "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=97, 3,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>=90, 2,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>0, 1,0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 2.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 1.0,
+      "EndColorValue": 3.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "startpage.position.bco": {
+      "Formula": {
+        "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=97, 3,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>=90, 2,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>0, 1,0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 2.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 1.0,
+      "EndColorValue": 3.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "startpage.laptime.bco": {
+      "Formula": {
+        "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=97, 3,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>=90, 2,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>0, 1,0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 2.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 1.0,
+      "EndColorValue": 3.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "startpage.p2.bco": {
+      "Formula": {
+        "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=97, 3,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>=90, 2,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>0, 1,0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 2.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 1.0,
+      "EndColorValue": 3.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "startpage.rpm.bco": {
+      "Formula": {
+        "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=97, 3,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>=90, 2,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>0, 1,0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 2.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 1.0,
+      "EndColorValue": 3.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "startpage.p3.bco": {
+      "Formula": {
+        "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=97, 3,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>=90, 2,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>0, 1,0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 2.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 1.0,
+      "EndColorValue": 3.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "startpage.start.bco": {
+      "Formula": {
+        "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=97, 3,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>=90, 2,\r\nif([CarSettings_CurrentDisplayedRPMPercent]>0, 1,0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 2.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 1.0,
+      "EndColorValue": 3.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.laptime.font": {
+      "Formula": {
+        "Expression": "if([DataCorePlugin.GameData.NewData.TotalLaps]>1,\r\n6,\r\n1)"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "font"
+    },
+    "global.info.txt": {
+      "Formula": {
+        "Expression": "if([DataCorePlugin.Computed.Fuel_Percent] < 10,\r\ntcase('Low Fuel!'),\r\n\r\ntcase('')\r\n)"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.engine.txt": {
+      "Formula": {
+        "Expression": "format([EngineMap], 'EMAP: ' + EngineMap])"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.daheadrel.txt": {
+      "FormatString": "0.000",
+      "Formula": {
+        "Expression": "[PersistantTrackerPlugin.DriverAhead_00_Gap]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.dleaderrel.txt": {
+      "FormatString": "-0.000",
+      "Formula": {
+        "Expression": "tcase('NREF')"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.dbehindrel.txt": {
+      "FormatString": "+0.000",
+      "Formula": {
+        "Expression": "[PersistantTrackerPlugin.DriverBehind_00_Gap]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.ign.txt": {
+      "Formula": {
+        "Expression": "tcase('I')"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.starter.txt": {
+      "Formula": {
+        "Expression": "tcase('S')"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.light.txt": {
+      "Formula": {
+        "Expression": "tcase('L')"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.rainlight.txt": {
+      "Formula": {
+        "Expression": "tcase('R')"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.abs1.bco": {
+      "Formula": {
+        "Expression": "if([ABSActive] = 0 , 0 , 1 )"
+      },
+      "StartColor": "#FF000000",
+      "EnableMiddleColor": false,
+      "MiddleColor": "#FF000000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FF008000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 1.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.tcs1.txt": {
+      "Formula": {
+        "Expression": "tcase('T')"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.tcs1.bco": {
+      "Formula": {
+        "Expression": "if([TCActive] = 0 , 0 , 1 )"
+      },
+      "StartColor": "#FF000000",
+      "EnableMiddleColor": false,
+      "MiddleColor": "#FF000000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FF008000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 1.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.light.bco": {
+      "Formula": {
+        "Expression": "if([GameRawData.Graphics.FlashingLights] = 1 , '65504',\r\n\r\nif([GameRawData.Graphics.LightsStage] = 0, '0',\r\n\r\nif([GameRawData.Graphics.LightsStage] = 1, '1024',\r\n\r\nif([GameRawData.Graphics.LightsStage] = 2, '31',\r\n\r\n0))))"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "bco"
+    },
+    "global.abs1.txt": {
+      "Formula": {
+        "Expression": "tcase('A')"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.rainlight.bco": {
+      "Formula": {
+        "Expression": "if([GameRawData.Graphics.RainLights] = 1, 1, 0)"
+      },
+      "StartColor": "#FF000000",
+      "EnableMiddleColor": false,
+      "MiddleColor": "#FF000000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FF008000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 1.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.starter.bco": {
+      "Formula": {
+        "Expression": "if([GameRawData.Physics.starterEngineOn] = 1 or [Rpms] > 500  , 1 , 0 )"
+      },
+      "StartColor": "#FF000000",
+      "EnableMiddleColor": false,
+      "MiddleColor": "#FF000000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FF008000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 1.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.flash.txt": {
+      "Formula": {
+        "Expression": "tcase('F')"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.flash.bco": {
+      "Formula": {
+        "Expression": "if([GameRawData.Graphics.FlashingLights] = 1, 1, 0)"
+      },
+      "StartColor": "#FFFF0000",
+      "EnableMiddleColor": false,
+      "MiddleColor": "#FF000000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FFFFFF00",
+      "StartColorValue": 0.0,
+      "EndColorValue": 1.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.wiper.txt": {
+      "Formula": {
+        "Expression": "tcase('W')"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.wiper.bco": {
+      "Formula": {
+        "Expression": "if([GameRawData.Graphics.WiperLV]==1,'63488',\r\nif([GameRawData.Graphics.WiperLV]==2,'1024',\r\nif([GameRawData.Graphics.WiperLV]==3,'31','0')))"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "bco"
+    },
+    "global.twrl.bco": {
+      "Formula": {
+        "Expression": "[TyreWearRearLeft]"
+      },
+      "StartColor": "#FFFF0000",
+      "EnableMiddleColor": false,
+      "MiddleColor": "#FF000000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FF008000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 100.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.ttfr.bco": {
+      "Formula": {
+        "Expression": "if([TyreTemperatureFrontRight] >= 100, 2,\r\nif([TyreTemperatureFrontRight] > 65, 1,\r\nif([TyreTemperatureFrontRight] <= 65, 0,\r\n0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 2.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.twfl.bco": {
+      "Formula": {
+        "Expression": "[TyreWearFrontLeft]"
+      },
+      "StartColor": "#FFFF0000",
+      "EnableMiddleColor": false,
+      "MiddleColor": "#FF000000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FF008000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 100.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.ttfl.bco": {
+      "Formula": {
+        "Expression": "if([TyreTemperatureFrontLeft] >= 100, 2,\r\nif([TyreTemperatureFrontLeft] > 65, 1,\r\nif([TyreTemperatureFrontLeft] <= 65, 0,\r\n0)))\r\n"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 2.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.twrr.bco": {
+      "Formula": {
+        "Expression": "[TyreWearRearRight]"
+      },
+      "StartColor": "#FFFF0000",
+      "EnableMiddleColor": false,
+      "MiddleColor": "#FF000000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FF008000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 100.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.ttrl.bco": {
+      "Formula": {
+        "Expression": "if([TyreTemperatureRearLeft] >= 100, 2,\r\nif([TyreTemperatureRearLeft] > 65, 1,\r\nif([TyreTemperatureRearLeft] <= 65, 0,\r\n0)))\r\n"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 2.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.twfr.bco": {
+      "Formula": {
+        "Expression": "[TyreWearFrontRight]"
+      },
+      "StartColor": "#FFFF0000",
+      "EnableMiddleColor": false,
+      "MiddleColor": "#FF000000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FF008000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 100.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.ttrr.bco": {
+      "Formula": {
+        "Expression": "if([TyreTemperatureRearRight] >= 100, 2,\r\nif([TyreTemperatureRearRight] > 65, 1,\r\nif([TyreTemperatureRearRight] <= 65, 0,\r\n0)))"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 2.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.btrr.bco": {
+      "Formula": {
+        "Expression": "[BrakeTemperatureRearRight]"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 500.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 1000.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.btrl.bco": {
+      "Formula": {
+        "Expression": "[BrakeTemperatureRearLeft]"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 500.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 1000.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.btfl.bco": {
+      "Formula": {
+        "Expression": "[BrakeTemperatureFrontLeft]"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 500.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 1000.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.btfr.bco": {
+      "Formula": {
+        "Expression": "[BrakeTemperatureFrontRight]"
+      },
+      "StartColor": "#FF0000FF",
+      "EnableMiddleColor": true,
+      "MiddleColor": "#FF008000",
+      "MiddleColorValue": 500.0,
+      "EndColor": "#FFFF0000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 1000.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    },
+    "global.sl1.txt": {
+      "FormatString": "mm\\:ss\\.fff",
+      "Formula": {
+        "Expression": "if(isnull([DataCorePlugin.GameData.NewData.Sector1LastLapTime]),\r\n'NREF',\r\n[DataCorePlugin.GameData.NewData.Sector1LastLapTime])"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.tyrecomp.txt": {
+      "Formula": {
+        "Expression": "if([GameRawData.Graphics.TyreCompound] ='dry_compound', tcase('Dry'),\r\n\r\ntcase('Wet'))"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.currsec.txt": {
+      "Formula": {
+        "Expression": "[CurrentSectorIndex]"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.sl2.txt": {
+      "FormatString": "mm\\:ss\\.fff",
+      "Formula": {
+        "Expression": "if(isnull([DataCorePlugin.GameData.NewData.Sector2LastLapTime]),\r\n'NREF',\r\n\r\nsecondstotimespan(\r\ntimespantoseconds([DataCorePlugin.GameData.NewData.Sector2LastLapTime])\r\n\r\n-\r\n\r\ntimespantoseconds([DataCorePlugin.GameData.NewData.Sector1LastLapTime])))"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.sl3.txt": {
+      "FormatString": "mm\\:ss\\.fff",
+      "Formula": {
+        "Expression": "if(isnull([DataCorePlugin.GameData.NewData.Sector3LastLapTime]),\r\n'NREF',\r\n\r\nsecondstotimespan(\r\ntimespantoseconds([LastLapTime])\r\n\r\n-\r\n\r\n(timespantoseconds([DataCorePlugin.GameData.NewData.Sector2LastLapTime])\r\n\r\n-\r\n\r\ntimespantoseconds([DataCorePlugin.GameData.NewData.Sector1LastLapTime]))\r\n\r\n-\r\n\r\ntimespantoseconds([DataCorePlugin.GameData.NewData.Sector1LastLapTime])\r\n\r\n))"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.currentsec.txt": {
+      "FormatString": "mm\\:ss\\.fff",
+      "Formula": {
+        "Expression": "if([DataCorePlugin.GameData.NewData.SessionTypeName] != 'RACE' and[DataCorePlugin.Computed.Fuel_CurrentLapIsValidForTracking] = 0 or [IsInPitLane] = 1\r\n,'NREF',\r\n\r\nif([DataCorePlugin.GameData.NewData.CurrentSectorIndex] = 1,\r\n[DataCorePlugin.GameData.NewData.CurrentLapTime],\r\n\r\nif([DataCorePlugin.GameData.NewData.CurrentSectorIndex] = 2,\r\nsecondstotimespan(\r\n(timespantoseconds([DataCorePlugin.GameData.NewData.CurrentLapTime])\r\n-timespantoseconds([DataCorePlugin.GameData.NewData.Sector1Time]))\r\n),\r\n\r\nif([DataCorePlugin.GameData.NewData.CurrentSectorIndex] = 3,\r\nsecondstotimespan(\r\n(timespantoseconds([DataCorePlugin.GameData.NewData.CurrentLapTime])-\r\n(timespantoseconds([DataCorePlugin.GameData.NewData.Sector1Time])+\r\ntimespantoseconds([DataCorePlugin.GameData.NewData.Sector2Time])))),\r\n0\r\n)\r\n)\r\n)\r\n)"
+      },
+      "Mode": 2,
+      "TargetPropertyName": "txt"
+    },
+    "global.ign.bco": {
+      "Formula": {
+        "Expression": "if([GameRawData.Physics.ignitionOn] = 0 , 0 , 1 )"
+      },
+      "StartColor": "#FF000000",
+      "EnableMiddleColor": false,
+      "MiddleColor": "#FF000000",
+      "MiddleColorValue": 1.0,
+      "EndColor": "#FF008000",
+      "StartColorValue": 0.0,
+      "EndColorValue": 1.0,
+      "Mode": 4,
+      "TargetPropertyName": "bco"
+    }
+  },
+  "RolesEx": {
+    "Global.gear": "GearRole;{\r\n  \"RedlineBlink\": false,\r\n  \"BlinkColor\": \"#FFFF0000\",\r\n  \"BlinkDelay\": 250\r\n}",
+    "Global.rpm": "RPMRole;{}",
+    "Global.speed": "SpeedRole;{}",
+    "Global.rpm1": "RPMRole;{}",
+    "Global.speed1": "SpeedRole;{}"
+  },
+  "ClickActionsEx": {},
+  "HotSpots": [],
+  "PagesMappings": [
+    {
+      "PageName": "main",
+      "ConditionToPage": {
+        "Expression": null
+      },
+      "InGame": true,
+      "Idle": true,
+      "Skip": false
+    },
+    {
+      "PageName": "sectors",
+      "ConditionToPage": {
+        "Expression": null
+      },
+      "InGame": true,
+      "Idle": true,
+      "Skip": false
+    },
+    {
+      "PageName": "tyre",
+      "ConditionToPage": {
+        "Expression": null
+      },
+      "InGame": true,
+      "Idle": true,
+      "Skip": false
+    },
+    {
+      "PageName": "brkstyrprs",
+      "ConditionToPage": {
+        "Expression": null
+      },
+      "InGame": true,
+      "Idle": true,
+      "Skip": false
+    },
+    {
+      "PageName": "fuel",
+      "ConditionToPage": {
+        "Expression": null
+      },
+      "InGame": true,
+      "Idle": true,
+      "Skip": false
+    },
+    {
+      "PageName": "misc",
+      "ConditionToPage": {
+        "Expression": null
+      },
+      "InGame": true,
+      "Idle": true,
+      "Skip": false
+    },
+    {
+      "PageName": "pitlim",
+      "ConditionToPage": {
+        "Expression": "[PitLimiterOn]"
+      },
+      "InGame": false,
+      "Idle": false,
+      "Skip": true
+    },
+    {
+      "PageName": "startpage",
+      "ConditionToPage": {
+        "Expression": "[DataCorePlugin.GameData.NewData.CurrentLap]<=1\r\nand\r\n[DataCorePlugin.GameData.NewData.SessionTypeName] = 'Race'\r\nand\r\n[DataCorePlugin.GameData.NewData.SpeedLocal]<20"
+      },
+      "InGame": false,
+      "Idle": false,
+      "Skip": true
+    },
+    {
+      "PageName": "bbalset",
+      "EventMappings": [
+        {
+          "EventName": "DataCorePlugin.BrakeBiasChanged",
+          "Duration": 2000
+        }
+      ],
+      "ConditionToPage": {
+        "Expression": null
+      },
+      "InGame": false,
+      "Idle": false,
+      "Skip": true
+    },
+    {
+      "PageName": "absset",
+      "EventMappings": [
+        {
+          "EventName": "DataCorePlugin.ABSLevelChanged",
+          "Duration": 2000
+        }
+      ],
+      "ConditionToPage": {
+        "Expression": null
+      },
+      "InGame": false,
+      "Idle": false,
+      "Skip": true
+    },
+    {
+      "PageName": "tcsset",
+      "EventMappings": [
+        {
+          "EventName": "DataCorePlugin.TCLevelChanged",
+          "Duration": 2000
+        }
+      ],
+      "ConditionToPage": {
+        "Expression": null
+      },
+      "InGame": false,
+      "Idle": false,
+      "Skip": true
+    },
+    {
+      "PageName": "engineset",
+      "EventMappings": [
+        {
+          "EventName": "DataCorePlugin.GameStarted",
+          "Duration": 3000
+        }
+      ],
+      "ConditionToPage": {
+        "Expression": null
+      },
+      "InGame": false,
+      "Idle": false,
+      "Skip": true
+    },
+    {
+      "PageName": "antistall",
+      "ConditionToPage": {
+        "Expression": "([DataCorePlugin.GameData.NewData.Gear] != 'N') \r\nand (28 >= [DataCorePlugin.GameData.NewData.CarSettings_CurrentDisplayedRPMPercent])\r\nand (0 < [DataCorePlugin.GameData.NewData.CarSettings_CurrentDisplayedRPMPercent])\r\nand (85 >= [DataCorePlugin.GameData.NewData.Clutch] >= 0)\r\nand ([DataCorePlugin.GameData.NewData.PitLimiterOn] = 0)"
+      },
+      "InGame": false,
+      "Idle": false,
+      "Skip": true
+    },
+    {
+      "PageName": "mainrel",
+      "ConditionToPage": {
+        "Expression": null
+      },
+      "InGame": true,
+      "Idle": true,
+      "Skip": false
+    },
+    {
+      "PageName": "start",
+      "ConditionToPage": {
+        "Expression": null
+      },
+      "InGame": false,
+      "Idle": true,
+      "Skip": false
+    },
+    {
+      "PageName": "laptm",
+      "ConditionToPage": {
+        "Expression": null
+      },
+      "InGame": true,
+      "Idle": true,
+      "Skip": false
+    }
+  ],
+  "RefreshDelaysEx": {
+    "sectors.currentlap": 500,
+    "main.dahead": 500,
+    "main.dleader": 500,
+    "main.currentlap": 500,
+    "main.dbehind": 500,
+    "main.delta": 500,
+    "mainrel.dleaderrel": 500,
+    "mainrel.daheadrel": 500,
+    "mainrel.currentlap": 500,
+    "mainrel.dbehindrel": 500,
+    "mainrel.delta": 500,
+    "tyre.ttfl": 500,
+    "tyre.ttfr": 500,
+    "tyre.ttrr": 500,
+    "tyre.ttrl": 500,
+    "tyre.twfl": 500,
+    "tyre.twfr": 500,
+    "tyre.twrr": 500,
+    "tyre.twrl": 500,
+    "tyre.tpfr": 500,
+    "tyre.tprr": 500,
+    "tyre.tprl": 500,
+    "tyre.tpfl": 500,
+    "brkstyrprs.btfl": 500,
+    "brkstyrprs.btfr": 500,
+    "brkstyrprs.btrr": 500,
+    "brkstyrprs.btrl": 500,
+    "fuel.fuelleft": 500,
+    "fuel.fuelperlap": 500,
+    "fuel.fueltimeleft": 500,
+    "fuel.fuellapleft": 500,
+    "misc.watertemp": 500,
+    "misc.oiltemp": 500,
+    "misc.oilpressure": 500,
+    "pitlim.currentlap": 500,
+    "pitlim.delta": 500,
+    "pitlim.dleader": 500,
+    "pitlim.dahead": 500,
+    "pitlim.dbehind": 500,
+    "pitlim.targetlap": 500,
+    "pitlim.pbbestlap": 500,
+    "pitlim.lastlap": 500,
+    "mainrel.fuelliter": 500,
+    "mainrel.erspercent": 500,
+    "sectors.lastlap": 500,
+    "sectors.pbbestlap": 500,
+    "sectors.targetlap": 500,
+    "sectors.s3": 500,
+    "sectors.s2": 500,
+    "sectors.s1": 500,
+    "sectors.delta": 500,
+    "sectors.laptime": 500,
+    "sectors.position": 500,
+    "main.position": 500,
+    "main.laptime": 500,
+    "mainrel.laptime": 500,
+    "mainrel.position": 500,
+    "tyre.laptime": 500,
+    "tyre.position": 500,
+    "brkstyrprs.laptime": 500,
+    "brkstyrprs.position": 500,
+    "fuel.laptime": 500,
+    "fuel.position": 500,
+    "misc.laptime": 500,
+    "misc.position": 500,
+    "pitlim.laptime": 500,
+    "pitlim.position": 500,
+    "startpage.laptime": 500,
+    "startpage.position": 500,
+    "bbalset.laptime": 500,
+    "bbalset.position": 500,
+    "tcsset.laptime": 500,
+    "tcsset.position": 500,
+    "absset.laptime": 500,
+    "absset.position": 500,
+    "engineset.laptime": 500,
+    "engineset.position": 500,
+    "global.currentsec": 500,
+    "global.sl1": 500,
+    "global.sl2": 500,
+    "global.sl3": 500,
+    "global.s1": 500,
+    "global.s2": 500,
+    "global.s3": 500,
+    "global.delta": 500,
+    "global.lastlap": 500,
+    "global.position": 500,
+    "global.pbbestlap": 500,
+    "global.targetlap": 500,
+    "global.laptime": 500,
+    "global.currentlap": 500
+  },
+  "VirtualPages": []
+}
