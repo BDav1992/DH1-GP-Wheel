@@ -9,3 +9,6 @@ How to use:
 2) Open the DH1_GP file. On the clutch tab you can modify the values of the clutches. Write in the previously read values then upload the sketch to the Arduino in your wheel. You can also modify the usage of the clutches. See in the sketch.
 
 For the DD-V1 Display Module visit https://github.com/SHWotever/SimHub/wiki/Nextion-Display.
+
+Libraries:
+I attached the two libraries that you need for complie the sketch. Just copy them to C:\Users\[username]\Documents\Arduino\libraries and they are ready to go.
