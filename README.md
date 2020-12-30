@@ -14,6 +14,7 @@ I attached the two libraries that you need for complie the sketch. Just copy the
 C:\Users\ [username] \Documents\Arduino\libraries
 
 # DD-V1:
-For the DD-V1 Display Module visit https://github.com/SHWotever/SimHub/wiki/Nextion-Display
+For the DD-V1 Display Module visit:
+https://github.com/SHWotever/SimHub/wiki/Nextion-Display
 
 
