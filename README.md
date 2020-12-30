@@ -10,7 +10,9 @@ How to use:
 
 For the DD-V1 Display Module visit https://github.com/SHWotever/SimHub/wiki/Nextion-Display.
 
+
 Libraries:
+
 I attached the two libraries that you need for complie the sketch. Just copy them to:
 
 C:\Users\ [username] \Documents\Arduino\libraries
